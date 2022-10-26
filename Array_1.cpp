@@ -20,7 +20,7 @@ int main()
     int element;
     cout << "Enter the element: " << endl;
     cin >> element;
-    // cout<<size;
+    cout<<size;
     for (int i = size-1; i > -1; i--)
     {
         if (index == (i))
@@ -38,6 +38,18 @@ int main()
     size = sizeof(arr) / sizeof(arr[0]);
     cout<<size<<"size"<<endl;
     printa(arr, size);
-
+    // code to delete the element
+    int index,element;
+    size = sizeof(arr) / sizeof(arr[0]);
+    cout<<"Enter the index"<<endl;
+    cin>>index;
+    cout<<"Enter the element"<<endl; 
+    cin>>element;
+    for(int i=index;i<size-1;i++)
+    {
+        arr[i]=arr[i+1];
+    }
+    size = sizeof(arr) / sizeof(arr[0]);
+    printa(arr,size);
     return 0;
 }
